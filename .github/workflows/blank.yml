@@ -26,6 +26,7 @@ jobs:
       - name: "Mostrar mensaje"
         run: echo "Hola mundo desde GitHub Actions"
       - name: "Mostrar variables de entorno"
+        if: ${{ env.platform == 'azure'}}
         run: |
           echo "Esto es el valor de platform : ${{ env.platform }}"
           echo "Esto es el valor de la región: ${{ env.region }}"
