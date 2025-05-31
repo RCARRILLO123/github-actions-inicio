@@ -34,4 +34,5 @@ jobs:
         run: |
           echo "Evento : ${{ toJson(github.event) }}"
           echo "GITHUB_AUTHOR : $GITHUB_AUTHOR"
+          echo "Actor que ejecutó el workflow: $GITHUB_ACTOR"
           echo "GITHUB_REPOSITORY : $GITHUB_REPOSITORY"
