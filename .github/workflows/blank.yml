@@ -32,8 +32,12 @@ jobs:
           echo "Esto es el valor de platform : ${{ env.platform }}"
           echo "Esto es el valor de la región: ${{ env.region }}"
           echo "Esto es el valor de account: ${{ env.account }}"
-            echo "Esto es el valor de username: ${{ env.username }}"
-              echo "Esto es el valor de pasword: ${{ env.password }}"
+          echo "Esto es el valor de username: ${{ env.username }}"
+          echo "Esto es el valor de pasword: ${{ env.password }}"
+      - name: "Mostrar valores solo si el usuario es correcto"
+        if: ${{ env.username != '' && env.password != '' }}
+        run: |
+          echo "Si existe usuario y contraseña"
       - name: "Mostrando variables por defecto"
         run: |
           echo "Evento : ${{ toJson(github.event) }}"
