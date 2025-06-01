@@ -34,6 +34,7 @@ jobs:
           echo "Esto es el valor de account: ${{ env.account }}"
           echo "Esto es el valor de username: ${{ env.username }}"
           echo "Esto es el valor de pasword: ${{ env.password }}"
+          echo "Proyect versión: ${{ vars.project_version }}"
       - name: "Mostrar valores solo si el usuario es correcto"
         if: ${{ env.username != '' && env.password != '' }}
         run: |
